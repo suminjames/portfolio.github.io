@@ -1,4 +1,205 @@
-/ ---
-/ ---
-/
-/ h1 hey!!
+---
+title: Portfolio
+---
+section.landing
+  .square
+    span.animated-border
+    span.animated-border
+    span.animated-border
+    .content
+      h1.font-weight-bold
+        span.font-weight-bold.fa-lg style="color: #ff0" S
+        span umin
+        span.font-weight-bold.ml-2.fa-lg style="color: #ff0" J
+        span ames
+      p Just new to animation
+      a[href="javascript:void(0)"] Enter Site
+
+main
+  = partial 'index/intro'
+  = partial 'index/about'
+  / a.scrolldown href="#"
+  /   span
+  /   span
+  /   span
+
+
+scss:
+  .landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 18vh;
+  }
+
+  .square {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .square .animated-border:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 2s;
+    animation: animate 6s linear infinite
+  }
+
+  .square:hover .animated-border:nth-child(1) {
+    border: 2px solid rgba(0, 0, 255, 0.8);
+    background: rgba(0, 0, 255, 0.8);
+  }
+
+  .square .animated-border:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 2s;
+    animation: animate2 4s linear infinite
+  }
+
+  .square:hover .animated-border:nth-child(2) {
+    border: 2px solid rgba(0, 0, 255, 0.8);
+    background: rgba(0, 0, 255, 0.8);
+  }
+
+  .square .animated-border:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 2s;
+    animation: animate 10s linear infinite
+  }
+
+  .square:hover .animated-border:nth-child(3) {
+    border: 2px solid rgba(0, 0, 255, 0.8);
+    background: rgba(0, 0, 255, 0.8);
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes animate2 {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .content {
+    position: relative;
+    padding: 40px 60px;
+    color: white;
+    text-align: center;
+    z-index: 1000;
+    transition: 0.5s;
+  }
+
+  .content a {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    border: 2px solid white;
+    padding: 6px 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
+  }
+
+  .content a:hover {
+    background: #ff0;
+    color: #333;
+  }
+
+  //scrolldown
+  .scrolldown{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50px) translateX(-50%) rotate(45deg);
+  }
+
+  .scrolldown span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    opacity: 0;
+    animation: scroll 1.5s linear infinite;
+  }
+
+  .scrolldown span:nth-child(1){
+    transform: translate(-15px,-15px);
+    animation-delay: -0.4s;
+  }
+
+  .scrolldown span:nth-child(2){
+    transform: translate(0px,0px);
+    animation-delay: -0.2s;
+  }
+
+  .scrolldown span:nth-child(3){
+    transform: translate(15px,15px);
+    animation-delay: 0s;
+  }
+
+  @keyframes scroll {
+    0%{
+      top: -5px;
+      left: -5px;
+      opacity: 0;
+    }
+    25%{
+      top: 0px;
+      left: 0px;
+      opacity: 1;
+    }
+    50%,100% {
+      top: 5px;
+      left: 5px;
+      opacity: 0;
+    }
+  }
+
+  main{
+    display: none;
+  }
+javascript:
+    $(function () {
+        $('.content a').click(function () {
+            $('.landing').fadeOut(2000,function () {
+                $('main').fadeIn(3000)
+            });
+        })
+    });

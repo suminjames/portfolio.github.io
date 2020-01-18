@@ -1,0 +1,39 @@
+section#intro
+  .body.text-center
+    h1.text-white.fa-5x.font-weight-bold.mb-5
+      span G
+      |ET 
+      span.ml-1 T
+      |O 
+      span.ml-1 K
+      |NOW 
+      span.ml-1 M
+      |E
+    a.p-2.px-5 href="#about" START
+
+scss:
+  #intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #intro .body a {
+    border: 2px solid white;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  #intro .body a:hover {
+    background: #ff0;
+    border: 2px solid #ff0;
+    color: black;
+  }
+
+  #intro .body span {
+    color: #ff0;
+  }
