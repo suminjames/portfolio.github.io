@@ -1,0 +1,55 @@
+section#academics.container.px-5.padding100top
+  .body.mx-3
+    h1.text-white.font-weight-bold.mb-2.heading-1
+      span A
+      |CADEMICS
+    a.p-2.px-5 href="#about" ABOUT
+    a.p-2.px-5.ml-2 href="#" NEXT
+
+scss:
+  #academics {
+    height: 100vh;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*background: linear-gradient(to right, rgba(0, 0, 0, 0.89), rgb(0, 0, 0)),url("./images/hair-bun.jpg");*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+  }
+
+  #academics .body a {
+    border: 2px solid white;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  #academics .body a:hover {
+    background: #ff0;
+    border: 2px solid #ff0;
+    color: black;
+  }
+
+  #academics .body span {
+    color: #ff0;
+  }
+
+  #academics .body .heading-1{
+    position: relative;
+  }
+
+  #academics .body .heading-1::after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    height: 1px;
+    width: 500px;
+    border: 1px solid #fff;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }

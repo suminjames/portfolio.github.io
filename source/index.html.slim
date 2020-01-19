@@ -1,23 +1,24 @@
 ---
 title: Portfolio
 ---
-section.landing
-  .square
-    span.animated-border
-    span.animated-border
-    span.animated-border
-    .content
-      h1.font-weight-bold
-        span.font-weight-bold.fa-lg style="color: #ff0" S
-        span umin
-        span.font-weight-bold.ml-2.fa-lg style="color: #ff0" J
-        span ames
-      p Just new to animation
-      a[href="javascript:void(0)"] Enter Site
+/ section.landing
+/   .square
+/     span.animated-border
+/     span.animated-border
+/     span.animated-border
+/     .content
+/       h1.font-weight-bold
+/         span.font-weight-bold.fa-lg style="color: #ff0" S
+/         span umin
+/         span.font-weight-bold.ml-2.fa-lg style="color: #ff0" J
+/         span ames
+/       p Just new to animation
+/       a[href="javascript:void(0)"] Enter Site
 
 main
   = partial 'index/intro'
   = partial 'index/about'
+  = partial 'index/academics'
   / a.scrolldown href="#"
   /   span
   /   span
@@ -192,14 +193,14 @@ scss:
     }
   }
 
-  main{
-    display: none;
-  }
-javascript:
-    $(function () {
-        $('.content a').click(function () {
-            $('.landing').fadeOut(2000,function () {
-                $('main').fadeIn(3000)
-            });
-        })
-    });
+//  main{
+//    display: none;
+//  }
+//javascript:
+//    $(function () {
+//        $('.content a').click(function () {
+//            $('.landing').fadeOut(2000,function () {
+//                $('main').fadeIn(3000)
+//            });
+//        })
+//    });

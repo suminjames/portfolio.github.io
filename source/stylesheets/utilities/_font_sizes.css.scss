@@ -1,0 +1,5 @@
+@for $index from 1 through 10 {
+  .font-size-#{$index} {
+    font-size: #{$index/2.0}rem;
+  }
+}
