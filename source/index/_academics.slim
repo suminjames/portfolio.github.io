@@ -1,23 +1,134 @@
-section#academics.container.px-5.padding100top
-  .body.mx-3
+section#academics.container.px-5.padding50top
+  .head.mx-3.mb-5
     h1.text-white.font-weight-bold.mb-2.heading-1
       span A
       |CADEMICS
+  .body.mx-3.mb-5
+    .box.mr-4
+      .content
+        h2 01
+        h3 Sirjana Secondary English School
+        p  - School Leaving Certificate
+        h4 2012
+    .box.mr-4
+      .content
+        h2 02
+        h3 Kathmandu Unified City College
+        p  - HSEB
+        h4 2013-2014
+    .box
+      .content
+        h2 03
+        h3 Aryan School of Engineering
+        p  - Bachelor in Information Technology
+        h4 2015-2019
+  .footer.mx-3
     a.p-2.px-5 href="#about" ABOUT
     a.p-2.px-5.ml-2 href="#" NEXT
 
 scss:
   #academics {
     height: 100vh;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*background: linear-gradient(to right, rgba(0, 0, 0, 0.89), rgb(0, 0, 0)),url("./images/hair-bun.jpg");*/
-    /*background-size: cover;*/
-    /*background-position: center;*/
   }
 
-  #academics .body a {
+  #academics .body {
+    display: flex;
+    justify-content: center;
+  }
+
+  #academics .body .box {
+    position: relative;
+    height: 350px;
+    background: #060c21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+  }
+
+  #academics .body .box:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    background: #fff;
+    transform: skew(2deg, 2deg);
+    z-index: -1;
+  }
+
+  #academics .body .box:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgba(255, 255, 255, .05);
+  }
+
+  #academics .body .box:nth-child(1):before {
+    background: linear-gradient(315deg, #ff0057, #e64a19);
+  }
+
+  #academics .body .box:nth-child(2):before {
+    background: linear-gradient(315deg, #89ff00, #00bcd4);
+  }
+
+  #academics .body .box:nth-child(3):before {
+    background: linear-gradient(315deg, #ff0000, #ffc107);
+  }
+
+  #academics .body .box .content {
+    position: relative;
+    padding: 20px;
+  }
+
+  #academics .body .box .content h2 {
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    font-size: 10em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.07);
+    transition: .5s;
+  }
+
+  #academics .box:hover .content h2 {
+    top: -100px;
+  }
+
+  #academics .body .box .content h4 {
+    position: absolute;
+    bottom: -45px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.07);
+    transition: .5s;
+  }
+
+  #academics .body .box .content h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  #academics .body .box .content p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  #academics .footer a {
     border: 2px solid white;
     color: white;
     font-size: 24px;
@@ -26,21 +137,21 @@ scss:
     transition: 0.5s;
   }
 
-  #academics .body a:hover {
+  #academics .footer a:hover {
     background: #ff0;
     border: 2px solid #ff0;
     color: black;
   }
 
-  #academics .body span {
+  #academics .head span {
     color: #ff0;
   }
 
-  #academics .body .heading-1{
+  #academics .head .heading-1 {
     position: relative;
   }
 
-  #academics .body .heading-1::after{
+  #academics .head .heading-1::after {
     content: '';
     position: absolute;
     display: block;
