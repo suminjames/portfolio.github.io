@@ -7,12 +7,11 @@ section.landing
     span.animated-border
     span.animated-border
     .content
-      h1.font-weight-bold
+      h1.font-weight-bold.mb-4
         span.font-weight-bold.fa-lg style="color: #ff0" S
         span umin
         span.font-weight-bold.ml-2.fa-lg style="color: #ff0" J
         span ames
-      p Just new to animation
       a[href="javascript:void(0)"] Enter Site
 
 main
@@ -24,6 +23,8 @@ main
     i.fab.fa-stack-overflow.icon-stack
   = partial 'index/intro'
   = partial 'index/about'
+  = partial 'index/experiences'
+  = partial 'index/skills'
   = partial 'index/academics'
   / a.scrolldown href="#"
   /   span
@@ -117,7 +118,7 @@ scss:
     }
   }
 
-  .content {
+  .landing .content {
     position: relative;
     padding: 40px 60px;
     color: white;
@@ -126,7 +127,7 @@ scss:
     transition: 0.5s;
   }
 
-  .content a {
+  .landing .content a {
     position: relative;
     display: inline-block;
     margin-top: 10px;
@@ -138,7 +139,7 @@ scss:
     border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
   }
 
-  .content a:hover {
+  .landing .content a:hover {
     background: #ff0;
     color: #333;
   }

@@ -1,0 +1,153 @@
+section#experiences.container.px-5.padding50top
+  .head.mx-3.mb-5
+    h1.text-white.font-weight-bold.mb-2.heading-1.text-center
+      span E
+      |XPERIENCES
+  .body.mx-3.mb-5
+    .box
+      .content.text-left
+        h2 Frontend Developer
+        p 6th June 2018 - 30th May 2019
+        p Ideabreed Technology
+        .description
+          p Involved in designing and developing innovative, and functional, and responsive designs.
+          p Effectively learned used technologies namely, HTML, CSS, JS and frameworks such as Bootstrap, AngularJs, Angular 6, etc
+
+    .box
+      .content.text-right
+        h2 Web Developer
+        p 1st June 2019 - Present
+        p Ideabreed Technology
+        .description
+          p Familiarized myself with back-end technologies such as Rails, its underlying language Ruby, template engines such as slim and erb and used testing frameworks such as Rspec..
+  .footer.mx-3
+    a.p-1.px-2.mb-2 href="#about" ^
+    a.p-1.px-2 href="#skills" ^
+
+scss:
+  #experiences {
+    height: 100vh;
+    position: relative;
+  }
+
+  #experiences .body {
+    position: relative;
+  }
+
+  #experiences .body .box:nth-child(1):before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: -10%;
+    height: 209px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 50px;
+    left: 0%;
+    z-index: 1;
+  }
+
+  #experiences .body .box:nth-child(2):after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 43%;
+    height: 209px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 50px;
+    right: 0%;
+    z-index: 1;
+  }
+
+  #experiences .body .box .content {
+    position: relative;
+    padding: 40px 60px;
+    color: white;
+    text-align: center;
+    z-index: 1000;
+    transition: 0.5s;
+  }
+
+  #experiences .body .box .content h2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: white;
+  }
+
+  #experiences .body .box .content p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  #experiences .body .box .content .description {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 8px;
+    margin-left: -10px;
+  }
+
+  #experiences .footer {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    flex-flow: column;
+  }
+
+  #experiences .footer a {
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s;
+    border-radius: 50%;
+  }
+
+  #experiences .footer a:nth-child(2) {
+    transform: rotateX(180deg);
+  }
+
+  #experiences .footer a:hover {
+    background: #ff0;
+    border: 2px solid #ff0;
+    color: black;
+  }
+
+  #experiences .head span {
+    color: #ff0;
+  }
+
+  #experiences .head .heading-1 {
+    position: relative;
+  }
+
+  #experiences .head .heading-1::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    height: 1px;
+    width: 364px;
+    border: 1px solid #fff;
+    left: 17%;
+    z-index: 1;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+
+  #experiences .head .heading-1::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    height: 1px;
+    width: 364px;
+    border: 1px solid #fff;
+    right: -19%;
+    z-index: 1;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }

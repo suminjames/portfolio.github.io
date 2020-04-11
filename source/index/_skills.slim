@@ -1,0 +1,165 @@
+section#skills.container.px-5.padding50top
+  .head.mx-3.mb-5
+    h1.text-white.font-weight-bold.mb-2.heading-1.text-center
+      span.ml-2 S
+      |KILLS
+  .body.mx-3.mb-5
+    .list
+      p HTML
+      .bar.html
+      p CSS
+      .bar.css
+      p BOOTSTRAP
+      .bar.bootstrap
+      p JAVASCRIPT
+      .bar.javascript
+      p ANGULAR JS & ANGULAR 6
+      .bar.angular
+    .list
+      p REACT JS
+      .bar.react-js
+      p RUBY
+      .bar.ruby
+      p RUBY ON RAILS
+      .bar.rails
+      p GIT (VERSION CONTROL)
+      .bar.git
+      p PHOTOSHOP
+      .bar.photoshop
+  .footer.mx-3
+    a.p-2.px-5 href="#experiences" EXPERIENCES
+    a.p-2.px-5.ml-2 href="#academics" ACADEMICS
+
+scss:
+  #skills {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.89), rgb(0, 0, 0)), url("./images/letters-bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #skills .head span {
+    color: #ff0;
+  }
+
+  #skills .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #skills .list {
+    width: 45%;
+    color: white;
+    font-size: 16px;
+  }
+
+  #skills .list:nth-child(1) {
+    width: 45%;
+    margin-right: 3%;
+  }
+
+  #skills .list .bar {
+    background-color: #FFF;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #060c21;
+    letter-spacing: 1px;
+  }
+
+  #skills .list .bar:hover {
+    background: #ff0;
+    transition: all 0.5s;
+  }
+
+  #skills .list .bar::before {
+    content: '';
+    background-color: #6f5b5b;
+    display: inherit;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+  }
+
+  @keyframes load {
+    from {
+      width: 0%
+    }
+  }
+
+  @-webkit-keyframes load {
+    from {
+      width: 0%
+    }
+  }
+
+  @-moz-keyframes load {
+    from {
+      width: 0%
+    }
+  }
+
+  @-o-keyframes load {
+    from {
+      width: 0%
+    }
+  }
+
+  #skills .list .bar.html::before {
+    width: calc(75% - 10px);
+  }
+
+  #skills .list .bar.css::before {
+    width: calc(65% - 10px);
+  }
+
+  #skills .list .bar.bootstrap::before {
+    width: calc(70% - 10px);
+  }
+
+  #skills .list .bar.javascript::before {
+    width: calc(50% - 10px);
+  }
+
+  #skills .list .bar.angular::before {
+    width: calc(25% - 10px);
+  }
+
+  #skills .list .bar.react-js::before {
+    width: calc(12% - 10px);
+  }
+
+  #skills .list .bar.ruby::before {
+    width: calc(40% - 10px);
+  }
+
+  #skills .list .bar.rails::before {
+    width: calc(55% - 10px);
+  }
+
+
+  #skills .list .bar.git::before {
+    width: calc(30% - 10px);
+  }
+
+  #skills .list .bar.photoshop::before {
+    width: calc(10% - 10px);
+  }
+
+  #skills .footer a {
+    border: 2px solid white;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  #skills .footer a:hover {
+    background: #ff0;
+    border: 2px solid #ff0;
+    color: black;
+  }
