@@ -1,6 +1,6 @@
 section#portfolio.px-5.padding50top
   .container
-    .head.mx-3.margin60bottom
+    .head.mx-3.margin80bottom
       h1.text-white.font-weight-bold.mb-2.heading-1.text-center
         span P
         |ORTFOLIO
@@ -22,10 +22,10 @@ section#portfolio.px-5.padding50top
             | Digital Signage
           = image_tag 'digital-signage.png'
       .control
-        h3.next Next
-        h3.prev Prev
+        h3.next >
+        h3.prev <
 
-    .footer.mx-3.margin80top
+    .footer.mx-3.margin60top
       a.p-2.px-5 href="#academics" ACADEMICS
       a.p-2.px-5.ml-2 href="#" NEXT
 
@@ -51,7 +51,7 @@ scss:
     left: 0;
     width: 100%;
     height: 100%;
-    background: white;
+    background: #68636396;
     transition: 0.5s;
   }
 
@@ -98,7 +98,7 @@ scss:
     position: absolute;
     top: 0px;
     left: 0;
-    color: #262626;
+    color: #fff;
     text-decoration: none;
     transition: 0.5s;
   }
@@ -114,23 +114,23 @@ scss:
     bottom: 0;
     right: 0;
     width: 100%;
-    height: 160px;
-    background: white;
+    height: 80px;
+    background: #68636396;
     z-index: 1;
     transition: 0.5s;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 
   #portfolio .body:hover .control {
-    bottom: -40px;
-    right: -80px;
+    bottom: 0px;
+    right: -40px;
   }
 
   #portfolio .body .control .next,
   #portfolio .body .control .prev {
     position: absolute;
-    height: 80px;
-    width: 80px;
+    height: 40px;
+    width: 40px;
     margin: 0;
     padding: 0;
     background: #ff0;
@@ -142,7 +142,7 @@ scss:
   }
 
   #portfolio .body .control .next {
-    bottom: 80px;
+    bottom: 40px;
     right: 0;
     border-bottom: 1px solid rgba(0, 0, 0, .2)
   }
