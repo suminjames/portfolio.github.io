@@ -1,0 +1,201 @@
+section#portfolio.px-5.padding50top
+  .container
+    .head.mx-3.margin60bottom
+      h1.text-white.font-weight-bold.mb-2.heading-1.text-center
+        span P
+        |ORTFOLIO
+    .body.mx-3.mb-5.mx-auto
+      .slide
+        div.active
+          a.title href="https://aokaengineering.com" target="_blank"
+            i.fas.fa-globe.mr-1
+            | Aoka Engineering
+          = image_tag 'aoka.png'
+        div
+          a.title href="https://mustang.ideabreed.net/" target="_blank"
+            i.fas.fa-globe.mr-1
+            | Nepal Tourism Board
+          = image_tag 'nepal-tourism.jpg'
+        div
+          a.title href="https://dashboard.ideasignage.com/digital-signage" target="_blank"
+            i.fas.fa-globe.mr-1
+            | Digital Signage
+          = image_tag 'digital-signage.png'
+      .control
+        h3.next Next
+        h3.prev Prev
+
+    .footer.mx-3.margin80top
+      a.p-2.px-5 href="#academics" ACADEMICS
+      a.p-2.px-5.ml-2 href="#" NEXT
+
+scss:
+  #portfolio {
+    height: 100vh;
+  }
+
+  #portfolio .body {
+    position: relative;
+    width: 500px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+  }
+
+  #portfolio .body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: 0.5s;
+  }
+
+  #portfolio .body:hover:before {
+    top: -40px;
+    left: -40px;
+  }
+
+  #portfolio .body .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  #portfolio .body .slide div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  #portfolio .body .slide div.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #portfolio .body .slide div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #portfolio .body .slide div .title {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    color: #262626;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  #portfolio .body:hover .title {
+    transform: translateY(-34px);
+    z-index: 1;
+
+  }
+
+  #portfolio .body .control {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 160px;
+    background: white;
+    z-index: 1;
+    transition: 0.5s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  #portfolio .body:hover .control {
+    bottom: -40px;
+    right: -80px;
+  }
+
+  #portfolio .body .control .next,
+  #portfolio .body .control .prev {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    margin: 0;
+    padding: 0;
+    background: #ff0;
+    color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  #portfolio .body .control .next {
+    bottom: 80px;
+    right: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .2)
+  }
+
+  #portfolio .body .control .prev {
+    bottom: 0px;
+    right: 0;
+  }
+
+
+  #portfolio .footer a {
+    border: 2px solid white;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  #portfolio .footer a:hover {
+    background: #ff0;
+    border: 2px solid #ff0;
+    color: black;
+  }
+
+  #portfolio .head span {
+    color: #ff0;
+  }
+
+javascript:
+    $(function () {
+        var img;
+        var portfolio = document.querySelector('#portfolio');
+        img = $(document).find('div.active').find('img')[0].getAttribute('src');
+        setBackground(img);
+
+        $('.next').click(function () {
+            $(document).find('div.active').next().addClass('active');
+            $(document).find('div.active').prev().removeClass('active');
+            img = $(document).find('div.active').find('img')[0].getAttribute('src');
+            setBackground(img);
+        });
+
+        $('.prev').click(function () {
+            $(document).find('div.active').prev().addClass('active');
+            $(document).find('div.active').next().removeClass('active');
+            img = $(document).find('div.active').find('img')[0].getAttribute('src');
+            setBackground(img);
+        });
+
+        function setBackground(img) {
+            portfolio.style.background = "linear-gradient(to right, rgba(16, 17, 17, 0.94), rgba(16, 17, 17, 0.84)),url(" + img + ") no-repeat";
+            portfolio.style.backgroundSize = "cover";
+            portfolio.style.backgroundPosition = "center";
+        }
+    });
